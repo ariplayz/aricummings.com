@@ -11,7 +11,7 @@ export const Hero = () => {
           <div className="space-y-6 animate-fade-in">
             <div className="space-y-4">
               <p className="text-lg text-muted-foreground">
-                Hello, I'm a student at
+                Hello, I'm Ari Cummings, a student at
               </p>
               <h1 className="text-4xl md:text-6xl font-bold">
                 <span className="bg-gradient-hero bg-clip-text text-transparent">
