@@ -12,7 +12,7 @@ export const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <div className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-            Portfolio
+            Ari Cummings
           </div>
 
           {/* Desktop Navigation */}
