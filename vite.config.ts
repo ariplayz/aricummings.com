@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
-    host: "192.168.88.3",
+    host: "0.0.0.0",
     port: 8080,
     cors: {
       origin: "https://aricummings.com", // Allow access from this origin
