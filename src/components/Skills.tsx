@@ -20,6 +20,7 @@ export const Skills = () => {
         { name: "React", level: "Intermediate", description: "Component-based development" },
         { name: ".NET", level: "Advanced", description: "Cross-platform applications" },
         { name: "SwiftUI", level: "Intermediate", description: "Modern iOS interfaces" },
+        { name: "JetBrains IDEs", level: "Advanced", description: "IntelliJ IDEA, WebStorm, development tools" },
         { name: "Node.js", level: "Beginner", description: "Backend JavaScript development" },
       ]
     },
@@ -28,6 +29,7 @@ export const Skills = () => {
       icon: "🛠️",
       skills: [
         { name: "Git/GitHub", level: "Advanced", description: "Version control, collaboration" },
+        { name: "JetBrains IDEs", level: "Advanced", description: "IntelliJ IDEA, WebStorm, professional development" },
         { name: "Visual Studio", level: "Advanced", description: "IDE for C# development" },
         { name: "Xcode", level: "Intermediate", description: "iOS development environment" },
         { name: "VS Code", level: "Advanced", description: "Code editing, extensions" },
