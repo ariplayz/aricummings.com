@@ -38,7 +38,6 @@ export const Projects = () => {
       tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       category: "Web",
       status: "Live",
-      Url: "https://aricummings.loveable.app"
       highlight: false
     }
   ];
