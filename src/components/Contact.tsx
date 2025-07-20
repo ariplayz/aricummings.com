@@ -3,16 +3,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Github, Linkedin, MapPin, Send } from "lucide-react";
+import { Mail, Github, Phone, MapPin, Send } from "lucide-react";
 
 export const Contact = () => {
   const contactMethods = [
     {
       icon: Mail,
       title: "Email",
-      value: "student@delphian.org",
+      value: "ari@aricummings.com",
       description: "Best way to reach me for opportunities or collaboration",
-      action: "mailto:student@delphian.org"
+      action: "mailto:ari@aricummings.com"
     },
     {
       icon: Github,
@@ -22,11 +22,11 @@ export const Contact = () => {
       action: "https://github.com/ariplayz"
     },
     {
-      icon: Linkedin,
-      title: "LinkedIn",
-      value: "Connect with me",
-      description: "Professional networking and career opportunities",
-      action: "https://linkedin.com"
+      icon: Phone,
+      title: "Phone",
+      value: "(914) 270-8351",
+      description: "Feel free to call or text for quick discussions",
+      action: "tel:+19142708351"
     },
     {
       icon: MapPin,
