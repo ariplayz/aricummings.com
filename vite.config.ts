@@ -13,6 +13,9 @@ export default defineConfig(({ mode }) => ({
       methods: ['GET', 'POST'], // Specify allowed methods
       allowedHeaders: ['Content-Type'], // Specify allowed headers
     },
+    allowedHosts: [
+      'aricummings.com', // Add the host to the allowed hosts
+    ],
   },
   plugins: [
     react(),
