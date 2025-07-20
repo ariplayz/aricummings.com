@@ -68,6 +68,7 @@ while true; do
         kill_process_using_port
 
         # Start the web project using npm run preview
+        #
         start_preview
     else
         echo "No changes detected."
