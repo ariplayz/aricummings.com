@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Set the path to your Git repository (one folder up from the current directory)
-REPO_PATH="../"
-
-# Change to the repository directory
-cd "$REPO_PATH" || { echo "Repository not found!"; exit 1; }
-
 # Infinite loop to check for updates
 while true; do
     # Fetch the latest changes from the remote repository
