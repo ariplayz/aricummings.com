@@ -1,6 +1,27 @@
 #!/bin/bash
-npm run preview
-npm_pid=$(pgrep -f "npm run preview")
+
+# Set the path to your Git repository (one folder up from the current directory)
+PID_FILE=".npm_preview_pid"
+
+# Function to start the npm preview
+start_preview() {
+    echo "Starting the web project with 'npm run preview'..."
+    npm run preview & echo $! > "$PID_FILE"
+}
+
+# Function to stop the npm preview
+stop_preview() {
+    if [ -f "$PID_FILE" ]; then
+        npm_pid=$(cat "$PID_FILE")
+        if ps -p "$npm_pid" > /dev/null; then
+            echo "Stopping old npm process with PID: $npm_pid"
+            kill -9 "$npm_pid"
+            rm "$PID_FILE"
+            sleep 2  # Wait for the process to terminate
+        fi
+    fi
+}
+
 # Infinite loop to check for updates
 while true; do
     # Fetch the latest changes from the remote repository
@@ -10,13 +31,8 @@ while true; do
     if [ $(git rev-list HEAD...origin/main --count) -gt 0 ]; then
         echo "Changes detected. Pulling updates..."
 
-        # Kill the old npm process
-        npm_pid=$(pgrep -f "npm run preview")
-        if [ -n "$npm_pid" ]; then
-            echo "Stopping old npm process with PID: $npm_pid"
-            kill -9 "$npm_pid"
-            sleep 2  # Wait for the process to terminate
-        fi
+        # Stop the old npm process
+        stop_preview
 
         # Pull the latest changes
         git pull
@@ -24,9 +40,8 @@ while true; do
         # Install any new dependencies (optional)
         npm install
 
-        # Start the web project
-        echo "Starting the web project..."
-        npm run preview
+        # Start the web project using npm run preview
+        start_preview
     else
         echo "No changes detected."
     fi
