@@ -8,6 +8,7 @@ start_preview() {
     echo "Starting the web project with 'npm run preview'..."
     npm run preview & echo $! > "$PID_FILE"
 }
+#hi
 
 # Function to stop the npm preview
 stop_preview() {
