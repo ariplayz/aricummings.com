@@ -31,14 +31,6 @@ export const Projects = () => {
       status: "Awaiting Release",
       highlight: true,
       githubUrl: "https://github.com/pointsslip/PointsSlipAndroid"
-    },
-    {
-      title: "Portfolio Website",
-      description: "Modern, responsive portfolio website built with React and TypeScript. Features smooth animations, dark mode, and optimized performance. This very website you're viewing!",
-      tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-      category: "Web",
-      status: "Live",
-      highlight: false
     }
   ];
 
