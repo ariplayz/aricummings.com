@@ -1,9 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, Github, MapPin, Send } from "lucide-react";
+import { Mail, Github, MapPin } from "lucide-react";
 
 export const Contact = () => {
   const contactMethods = [
@@ -43,7 +40,7 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
           {/* Contact Information */}
           <div className="space-y-6">
             <div className="space-y-4">
@@ -56,7 +53,7 @@ export const Contact = () => {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {contactMethods.map((method, index) => {
                 const IconComponent = method.icon;
                 return (
@@ -107,49 +104,6 @@ export const Contact = () => {
               </CardContent>
             </Card>
           </div>
-
-          {/* Contact Form */}
-          <Card className="bg-gradient-card border-border">
-            <CardContent className="p-6">
-              <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
-              
-              <form className="space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" placeholder="Your name" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input id="subject" placeholder="What's this about?" />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Tell me about your project or just say hello!" 
-                    rows={5}
-                  />
-                </div>
-                
-                <Button variant="gradient" size="lg" className="w-full">
-                  <Send className="h-5 w-5" />
-                  Send Message
-                </Button>
-              </form>
-              
-              <p className="text-xs text-muted-foreground mt-4 text-center">
-                I'll get back to you as soon as possible, usually within 24 hours!
-              </p>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
