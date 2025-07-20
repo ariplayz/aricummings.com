@@ -1,5 +1,6 @@
 #!/bin/bash
-
+npm run preview
+npm_pid=$(pgrep -f "npm run preview")
 # Infinite loop to check for updates
 while true; do
     # Fetch the latest changes from the remote repository
