@@ -2,7 +2,7 @@
 
 # Set the path to your Git repository (one folder up from the current directory)
 PID_FILE=".npm_preview_pid"
-PORT=4173
+PORT=8080
 
 # Function to start the npm preview
 start_preview() {
