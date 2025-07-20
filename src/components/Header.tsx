@@ -30,8 +30,10 @@ export const Header = () => {
               Contact
             </a>
             <div className="flex items-center space-x-2">
-              <Button variant="ghost" size="icon">
-                <Github className="h-5 w-5" />
+              <Button variant="ghost" size="icon" asChild>
+                <a href="https://github.com/ariplayz" target="_blank" rel="noopener noreferrer">
+                  <Github className="h-5 w-5" />
+                </a>
               </Button>
               <Button variant="gradient" size="sm">
                 <Mail className="h-4 w-4" />
@@ -84,8 +86,10 @@ export const Header = () => {
                 Contact
               </a>
               <div className="flex items-center space-x-2 pt-2">
-                <Button variant="ghost" size="icon">
-                  <Github className="h-5 w-5" />
+                <Button variant="ghost" size="icon" asChild>
+                  <a href="https://github.com/ariplayz" target="_blank" rel="noopener noreferrer">
+                    <Github className="h-5 w-5" />
+                  </a>
                 </Button>
                 <Button variant="gradient" size="sm">
                   <Mail className="h-4 w-4" />

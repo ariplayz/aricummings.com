@@ -21,8 +21,10 @@ export const Footer = () => {
               building the future one line of code at a time.
             </p>
             <div className="flex space-x-2">
-              <Button variant="ghost" size="icon">
-                <Github className="h-5 w-5" />
+              <Button variant="ghost" size="icon" asChild>
+                <a href="https://github.com/ariplayz" target="_blank" rel="noopener noreferrer">
+                  <Github className="h-5 w-5" />
+                </a>
               </Button>
               <Button variant="ghost" size="icon">
                 <Mail className="h-5 w-5" />

@@ -32,9 +32,11 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button variant="hero" size="lg">
-                <Github className="h-5 w-5" />
-                View My Work
+              <Button variant="hero" size="lg" asChild>
+                <a href="https://github.com/ariplayz" target="_blank" rel="noopener noreferrer">
+                  <Github className="h-5 w-5" />
+                  View My Work
+                </a>
               </Button>
               <Button variant="outline" size="lg">
                 <ExternalLink className="h-5 w-5" />

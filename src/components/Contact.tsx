@@ -17,9 +17,9 @@ export const Contact = () => {
     {
       icon: Github,
       title: "GitHub",
-      value: "@delphian-student",
+      value: "@ariplayz",
       description: "Check out my code and open source contributions",
-      action: "https://github.com"
+      action: "https://github.com/ariplayz"
     },
     {
       icon: Linkedin,
