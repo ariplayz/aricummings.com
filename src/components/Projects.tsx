@@ -8,7 +8,7 @@ export const Projects = () => {
     {
       title: "PointsSlip Desktop App",
       description: "A finished MacOS/Windows application to help Delphian School students manage their daily production points, based on a system used at the school. Features student tracking, progress monitoring, and productivity management.",
-      tech: ["Desktop App", "Cross-platform", "Student Management"],
+      tech: ["Desktop App", "Cross-platform", "Dotnet", "C#"],
       category: "Desktop",
       status: "Completed",
       highlight: true,
@@ -17,7 +17,7 @@ export const Projects = () => {
     {
       title: "PointsSlip iOS",
       description: "iOS version of the PointsSlip app, currently in beta on TestFlight and under review for the App Store. Provides mobile access to production point management for Delphian School students on iOS devices.",
-      tech: ["iOS", "Swift", "TestFlight", "Mobile"],
+      tech: ["iOS", "Swift", "Mobile"],
       category: "Mobile",
       status: "In Review",
       highlight: true,
@@ -38,6 +38,7 @@ export const Projects = () => {
       tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       category: "Web",
       status: "Live",
+      Url: "https://aricummings.loveable.app"
       highlight: false
     }
   ];
