@@ -7,7 +7,7 @@ PORT=4173
 # Function to start the npm preview
 start_preview() {
     echo "Starting the web project with 'npm run preview'..."
-    npm run preview & echo $! > "$PID_FILE"
+    npm run dev & echo $! > "$PID_FILE"
 }
 
 kill_process_using_port() {
@@ -42,7 +42,7 @@ kill_all_npm_processes() {
 
 kill_all_npm_processes
 kill_process_using_port
-npm run preview & echo $! > "$PID_FILE"
+npm run dev & echo $! > "$PID_FILE"
 
 trap cleanup SIGINT
 
