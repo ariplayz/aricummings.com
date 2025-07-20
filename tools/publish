@@ -23,7 +23,21 @@ stop_preview() {
     fi
 }
 
+cleanup() {
+    echo "Cleaning up..."
+    stop_preview
+    exit 0
+}
+
+kill_all_npm_processes() {
+    echo "Killing all npm processes..."
+    pkill -f "npm"
+}
+
+kill_all_npm_processes
 npm run preview & echo $! > "$PID_FILE"
+
+trap cleanup SIGINT
 
 # Infinite loop to check for updates
 while true; do
@@ -42,6 +56,8 @@ while true; do
 
         # Install any new dependencies (optional)
         npm install
+
+        kill_all_npm_processes
 
         # Start the web project using npm run preview
         start_preview
