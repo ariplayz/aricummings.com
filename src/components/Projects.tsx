@@ -6,20 +6,31 @@ import { Github, ExternalLink, Code2 } from "lucide-react";
 export const Projects = () => {
   const projects = [
     {
-      title: "Task Management iOS App",
-      description: "A SwiftUI-based task management application with Core Data integration, custom animations, and dark mode support. Features include task categorization, due date reminders, and productivity analytics.",
-      tech: ["Swift", "SwiftUI", "Core Data", "iOS"],
-      category: "Mobile",
-      status: "Completed",
-      highlight: true
-    },
-    {
-      title: "Student Grade Tracker",
-      description: "A C# desktop application built with WPF that helps students track their grades across multiple subjects. Includes GPA calculation, grade predictions, and export functionality.",
-      tech: ["C#", "WPF", ".NET", "SQLite"],
+      title: "PointsSlip Desktop App",
+      description: "A finished MacOS/Windows application to help Delphian School students manage their daily production points, based on a system used at the school. Features student tracking, progress monitoring, and productivity management.",
+      tech: ["Desktop App", "Cross-platform", "Student Management"],
       category: "Desktop",
       status: "Completed",
-      highlight: false
+      highlight: true,
+      githubUrl: "https://github.com/pointsslip/PointsSlipApp"
+    },
+    {
+      title: "PointsSlip iOS",
+      description: "iOS version of the PointsSlip app, currently in beta on TestFlight and under review for the App Store. Provides mobile access to production point management for Delphian School students on iOS devices.",
+      tech: ["iOS", "Swift", "TestFlight", "Mobile"],
+      category: "Mobile",
+      status: "In Review",
+      highlight: true,
+      githubUrl: "https://github.com/pointsslip/PointsSlipIOS"
+    },
+    {
+      title: "PointsSlip Android",
+      description: "Android version of the PointsSlip app developed in Kotlin and Java. The app is fully developed and awaiting publishing on Google Play Store to provide Android users access to production point management.",
+      tech: ["Android", "Kotlin", "Java", "Mobile"],
+      category: "Mobile",
+      status: "Awaiting Release",
+      highlight: true,
+      githubUrl: "https://github.com/pointsslip/PointsSlipAndroid"
     },
     {
       title: "Portfolio Website",
@@ -27,31 +38,7 @@ export const Projects = () => {
       tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       category: "Web",
       status: "Live",
-      highlight: true
-    },
-    {
-      title: "Open Source Contribution",
-      description: "Contributed bug fixes and feature enhancements to a popular C# logging library. Improved error handling and added new configuration options used by thousands of developers.",
-      tech: ["C#", ".NET", "Open Source", "Git"],
-      category: "Contribution",
-      status: "Merged",
       highlight: false
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Interactive weather dashboard with real-time data visualization. Features include location-based forecasts, weather maps, and customizable widgets built with modern JavaScript.",
-      tech: ["JavaScript", "HTML/CSS", "APIs", "Chart.js"],
-      category: "Web",
-      status: "In Progress",
-      highlight: false
-    },
-    {
-      title: "School Event App",
-      description: "iOS app for The Delphian School community to stay updated on events, announcements, and activities. Features push notifications, calendar integration, and social features.",
-      tech: ["Swift", "SwiftUI", "Firebase", "Push Notifications"],
-      category: "Mobile",
-      status: "In Progress",
-      highlight: true
     }
   ];
 
@@ -60,6 +47,8 @@ export const Projects = () => {
       case "Live": return "bg-green-500/10 text-green-600 border-green-500/20";
       case "Completed": return "bg-blue-500/10 text-blue-600 border-blue-500/20";
       case "In Progress": return "bg-yellow-500/10 text-yellow-600 border-yellow-500/20";
+      case "In Review": return "bg-orange-500/10 text-orange-600 border-orange-500/20";
+      case "Awaiting Release": return "bg-purple-500/10 text-purple-600 border-purple-500/20";
       case "Merged": return "bg-purple-500/10 text-purple-600 border-purple-500/20";
       default: return "bg-secondary text-secondary-foreground";
     }
@@ -114,10 +103,22 @@ export const Projects = () => {
                 </div>
                 
                 <div className="flex space-x-2 pt-2">
-                  <Button variant="outline" size="sm" className="flex-1">
-                    <Github className="h-4 w-4" />
-                    Code
-                  </Button>
+                  {project.githubUrl ? (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="flex-1"
+                      onClick={() => window.open(project.githubUrl, '_blank')}
+                    >
+                      <Github className="h-4 w-4" />
+                      Code
+                    </Button>
+                  ) : (
+                    <Button variant="outline" size="sm" className="flex-1">
+                      <Github className="h-4 w-4" />
+                      Code
+                    </Button>
+                  )}
                   {project.status === "Live" && (
                     <Button variant="default" size="sm" className="flex-1">
                       <ExternalLink className="h-4 w-4" />
