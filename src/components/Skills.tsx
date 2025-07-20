@@ -9,18 +9,17 @@ export const Skills = () => {
       skills: [
         { name: "C#", level: "Advanced", description: "Desktop apps, APIs, game development" },
         { name: "Swift", level: "Intermediate", description: "iOS apps, UI/UX design" },
-        { name: "JavaScript", level: "Advanced", description: "Modern ES6+, async programming" },
-        { name: "HTML/CSS", level: "Advanced", description: "Responsive design, animations" },
+        { name: "JavaScript", level: "Beginner", description: "Embedded programming in web" },
+        { name: "HTML/CSS", level: "Beginner", description: "Responsive design, animations" },
       ]
     },
     {
       title: "Frameworks & Libraries",
       icon: "🚀",
       skills: [
-        { name: "React", level: "Intermediate", description: "Component-based development" },
         { name: ".NET", level: "Advanced", description: "Cross-platform applications" },
+        { name: "Avalonia UI", level: "Intermediate", description: "UI development with C# and XAML" },
         { name: "SwiftUI", level: "Intermediate", description: "Modern iOS interfaces" },
-        { name: "JetBrains IDEs", level: "Advanced", description: "IntelliJ IDEA, WebStorm, development tools" },
         { name: "Node.js", level: "Beginner", description: "Backend JavaScript development" },
       ]
     },
