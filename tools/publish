@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Set the path to your Git repository
+REPO_PATH="/path/to/delphian-coder-site"  # Update this to the correct absolute path
+
+# Change to the repository directory
+cd "$REPO_PATH" || { echo "Repository not found!"; exit 1; }
+
+# Infinite loop to check for updates
+while true; do
+    # Fetch the latest changes from the remote repository
+    git fetch
+
+    # Check if there are any changes to pull
+    if [ $(git rev-list HEAD...origin/main --count) -gt 0 ]; then
+        echo "Changes detected. Pulling updates..."
+
+        # Kill the old npm process
+        npm_pid=$(pgrep -f "npm start")
+        if [ -n "$npm_pid" ]; then
+            echo "Stopping old npm process with PID: $npm_pid"
+            kill -9 "$npm_pid"
+            sleep 2  # Wait for the process to terminate
+        fi
+
+        # Pull the latest changes
+        git pull
+
+        # Install any new dependencies (optional)
+        npm install
+
+        # Start the web project
+        echo "Starting the web project..."
+        npm start &
+    else
+        echo "No changes detected."
+    fi
+
+    # Wait for 5 seconds before checking again
+    sleep 5
+done
