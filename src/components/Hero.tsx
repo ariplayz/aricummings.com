@@ -10,6 +10,10 @@ export const Hero = () => {
           {/* Text Content */}
           <div className="space-y-6 animate-fade-in">
             <div className="space-y-4">
+              <div className="flex items-center space-x-2 text-xl text-muted-foreground">
+                <Code2 className="h-6 w-6 text-primary" />
+                <span>The Delphian School</span>
+              </div>
               <p className="text-lg text-muted-foreground">
                 Hello, I'm Ari Cummings, a student at
               </p>
@@ -20,10 +24,6 @@ export const Hero = () => {
                 <br />
                 Developer
               </h1>
-              <div className="flex items-center space-x-2 text-xl text-muted-foreground">
-                <Code2 className="h-6 w-6 text-primary" />
-                <span>The Delphian School</span>
-              </div>
             </div>
             
             <p className="text-lg text-muted-foreground max-w-lg">
