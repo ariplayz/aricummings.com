@@ -9,8 +9,8 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6 animate-fade-in">
+            <Code2 className="h-8 w-8 text-primary mb-4" />
             <div className="space-y-4">
-              <Code2 className="h-6 w-6 text-primary" />
               <p className="text-lg text-muted-foreground">
                 Hello, I'm Ari Cummings, a student at
               </p>
