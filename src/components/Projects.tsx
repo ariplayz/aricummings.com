@@ -6,31 +6,22 @@ import { Github, ExternalLink, Code2 } from "lucide-react";
 export const Projects = () => {
   const projects = [
     {
-      title: "PointsSlip Desktop App",
-      description: "A finished MacOS/Windows application to help Delphian School students manage their daily production points, based on a system used at the school. Features student tracking, progress monitoring, and productivity management.",
-      tech: ["Desktop App", "Cross-platform", "Dotnet", "C#"],
-      category: "Desktop",
-      status: "Completed",
+      title: "PointsSlip Cross-Platform Suite",
+      description: "A comprehensive productivity management system for Delphian School students to track daily production points. Includes desktop app (macOS/Windows), iOS app (in App Store review), and Android app (awaiting Google Play release). Features student tracking, progress monitoring, and cross-platform synchronization.",
+      tech: ["C#", "Swift", "Kotlin", "Cross-platform", "Desktop", "Mobile"],
+      category: "Full Stack",
+      status: "Merged",
       highlight: true,
-      githubUrl: "https://github.com/pointsslip/PointsSlipApp"
+      githubUrl: "https://github.com/pointsslip"
     },
     {
-      title: "PointsSlip iOS",
-      description: "iOS version of the PointsSlip app, currently in beta on TestFlight and under review for the App Store. Provides mobile access to production point management for Delphian School students on iOS devices.",
-      tech: ["iOS", "Swift", "Mobile"],
+      title: "ShareMile - iOS Mileage Tracker",
+      description: "A modern iOS application for tracking and sharing mileage data with a robust C# backend API. Features real-time syncing, expense categorization, and collaborative mileage sharing for teams and families. Built with SwiftUI and .NET Core.",
+      tech: ["SwiftUI", "C#", ".NET Core", "iOS", "API", "Real-time"],
       category: "Mobile",
-      status: "In Review",
+      status: "In Progress",
       highlight: true,
-      githubUrl: "https://github.com/pointsslip/PointsSlipIOS"
-    },
-    {
-      title: "PointsSlip Android",
-      description: "Android version of the PointsSlip app developed in Kotlin and Java. The app is fully developed and awaiting publishing on Google Play Store to provide Android users access to production point management.",
-      tech: ["Android", "Kotlin", "Java", "Mobile"],
-      category: "Mobile",
-      status: "Awaiting Release",
-      highlight: true,
-      githubUrl: "https://github.com/pointsslip/PointsSlipAndroid"
+      githubUrl: ""
     }
   ];
 
