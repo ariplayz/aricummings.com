@@ -38,10 +38,6 @@ export const Hero = () => {
                   View My Work
                 </a>
               </Button>
-              <Button variant="outline" size="lg">
-                <ExternalLink className="h-5 w-5" />
-                Download Resume
-              </Button>
             </div>
 
             {/* Tech Stack Preview */}
