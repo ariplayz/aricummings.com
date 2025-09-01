@@ -7,21 +7,21 @@ export const Projects = () => {
   const projects = [
     {
       title: "PointsSlip Cross-Platform Suite",
-      description: "A comprehensive productivity management system for Delphian School students to track daily production points. Includes desktop app (macOS/Windows), iOS app (in App Store review), and Android app (awaiting Google Play release). Features student tracking, progress monitoring, and cross-platform synchronization.",
+      description: "A comprehensive productivity management system for Delphian School students to track daily production points. Includes desktop app (macOS/Windows), iOS app in the app store, Apple Watch app, and Android app (awaiting Google Play release).",
       tech: ["C#", "Swift", "Kotlin", "Cross-platform", "Desktop", "Mobile"],
       category: "Full Stack",
-      status: "Merged",
+      status: "Completed",
       highlight: true,
-      githubUrl: "https://github.com/pointsslip"
+      githubUrl: "https://github.com/orgs/pointsslip/repositories"
     },
     {
-      title: "ShareMile - iOS Mileage Tracker",
-      description: "A modern iOS application for tracking and sharing mileage data with a robust C# backend API. Features real-time syncing, expense categorization, and collaborative mileage sharing for teams and families. Built with SwiftUI and .NET Core.",
-      tech: ["SwiftUI", "C#", ".NET Core", "iOS", "API", "Real-time"],
+      title: "MileageTracker",
+      description: "A modern cross-platform mobile application for tracking and sharing mileage data with a robust C# backend API. Features real-time syncing, categorization, and collaborative mileage sharing for teams and families. Built with SwiftUI, Kotlin, and .NET Core.",
+      tech: ["SwiftUI", "Kotlin", "C#", ".NET Core", "iOS", "API", "Real-time"],
       category: "Mobile",
       status: "In Progress",
       highlight: true,
-      githubUrl: ""
+      githubUrl: "https://github.com/orgs/Mileage-Tracker-App/repositories"
     }
   ];
 
