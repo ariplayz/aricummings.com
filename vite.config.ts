@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => ({
     },
     allowedHosts: [
       'aricummings.com', // Add the host to the allowed hosts
+      'arigreenecummings.com',
     ],
   },
   plugins: [
