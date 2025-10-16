@@ -72,7 +72,7 @@ export const Footer = () => {
         <div className="border-t border-border pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <span>🄯 GNU GPL v3 Built with</span>
+              <span>\u{1F12F}🄯 GNU GPL v3 Built with</span>
               <Heart className="h-4 w-4 text-red-500" />
               <span> and Open Source using React & TypeScript</span>
             </div>
