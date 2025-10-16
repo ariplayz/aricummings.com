@@ -37,7 +37,7 @@ cleanup() {
 
 kill_all_npm_processes() {
     echo "Killing all npm processes..."
-    pkill -f "npm run dev"
+    pkill -f "npm"
 }
 
 kill_all_npm_processes
